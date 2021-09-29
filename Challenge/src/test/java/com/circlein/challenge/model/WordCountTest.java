@@ -7,7 +7,6 @@ import java.io.IOException;
 
 public class WordCountTest
 {
-
     @Test
     public void testWordCount() throws IOException
     {

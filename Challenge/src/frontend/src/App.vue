@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WordCount from './components/WordCountComp.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld: WordCount
   }
 }
 </script>
