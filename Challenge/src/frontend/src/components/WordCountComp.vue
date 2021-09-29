@@ -5,13 +5,15 @@
       <div class="form-group">
         <label for="url"></label>
         <h4>Enter a website URL to scour!</h4>
-        <input  type="text" class="form-control" id="url" style="width: 240px;" v-model="form.url"
-               placeholder="Enter in form: https://www.example.com" pattern="https?://.+" required>
+        <input type="text" class="form-control" id="url" style="width: 240px;" v-model="form.url"
+               placeholder="Enter in form: https://www.example.com" pattern="https?://.+" required
+               title="Form: https://www.example.com">
       </div>
       <div class="form-group">
         <label for="word"></label>
         <h4>What word are we looking for?</h4>
-        <input type="text" class="form-control" id="word" style="width: 200px;" v-model="form.word">
+        <input type="text" class="form-control" id="word" style="width: 200px;" v-model="form.word"
+               pattern="[A-Za-z']+" title="Letters & apostrophes only please!">
       </div>
       <br>
       <div class="form-group">
@@ -39,12 +41,14 @@ export default {
       wordCount: ''
     }
   },
-  methods:{
+  methods: {
     submitForm() {
-      axios.get("/api/wordCount/", { params: {
+      axios.get("/api/wordCount/", {
+        params: {
           url: this.form.url,
           word: this.form.word
-        }})
+        }
+      })
           .then((response) => {
             this.wordCount = response.data;
           })
