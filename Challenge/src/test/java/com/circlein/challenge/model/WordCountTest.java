@@ -3,13 +3,16 @@ package com.circlein.challenge.model;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class WordCountTest
 {
 
     @Test
-    public void testWordCount()
+    public void testWordCount() throws IOException
     {
-        Assert.assertEquals(3, new WordCount().getWordFreq(NORMAL));
+        // Testing whether the expected frequency of a word is seen in a normal sentence
+        Assert.assertEquals(3, new WordCount().getWordFreq(NORMAL, "there"));
     }
 
     private static final String NORMAL = "We are going to go over there. There are people over there.";
