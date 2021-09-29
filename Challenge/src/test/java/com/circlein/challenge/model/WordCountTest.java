@@ -13,9 +13,12 @@ public class WordCountTest
     {
         // Testing whether the expected frequency of a word is seen in a normal sentence
         Assert.assertEquals(3, new WordCount().getWordFreq(NORMAL, "there"));
+
+        // Testing the expected frequency with inconsistent punctuation and case
+        Assert.assertEquals(3, new WordCount().getWordFreq(INCORRECT_PUNC, "there"));
     }
 
     private static final String NORMAL = "We are going to go over there. There are people over there.";
-    private static final String INCORRECT_PUNC = "We are. going to go over there. to where they are over .there";
+    private static final String INCORRECT_PUNC = "We are going to go over ..!there. There are people over THERE.";
     private static final String ILLEGIBLE = "akjdgaghdalTHEREakjhfasbthere";
 }
