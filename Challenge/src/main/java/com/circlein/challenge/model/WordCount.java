@@ -13,24 +13,19 @@ public class WordCount
 {
     /*
         Initially the following two methods were combined into one.
-        I made the decision to split them so I could test getWordFreq().
+        I made the decision to split them, so I could test getWordFreq().
         In the future I would learn to mock the static methods in getText() so that they are testable.
         Manually tested through postman.
-        Ideally, I wouldn't pass the 'word' parameter in both getText() and getWordFreq() .. this may change dependent
-        on frontend decisions.
 
         Parameters:
             - url: this is the URL for the webpage that we want to analyse
             - word: this is the word that we are measuring the frequency of in the given url
      */
-    public int getText(String url, String word) throws IOException
+    public String getText(String url) throws IOException
     {
         Document toHtml = Jsoup.connect(url).get();
         String htmlToText = toHtml.body().text();
-
-        int count = getWordFreq(htmlToText, word);
-
-        return count;
+        return htmlToText;
     }
 
     /*
@@ -48,24 +43,23 @@ public class WordCount
         int wordCount = 0;
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(textBody.getBytes(StandardCharsets.UTF_8))));
-
         String currentLine;
 
         while ((currentLine = reader.readLine()) != null)
         {
-
+            // Split every line of the reader into a string array based upon the regex
             String[] lineToArray = currentLine.split("[^a-zA-Z0-9']");
 
+            // Iterate over the string array and read every word
             for (String currentWord : lineToArray)
             {
-
+                // If the current word is equal to the parameter 'word', increase the count
                 if (currentWord.equalsIgnoreCase(word))
                 {
                     wordCount++;
                 }
             }
         }
-
         reader.close();
 
         return wordCount;
