@@ -3,8 +3,6 @@ package com.circlein.challenge.controller;
 import com.circlein.challenge.model.WordCount;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-
 @RestController
 @RequestMapping("/api/wordCount")
 public class WordCountController

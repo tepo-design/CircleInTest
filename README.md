@@ -17,6 +17,7 @@ Steps to run BackEnd:
 - cd into Challenge folder
 - run 'mvn install'
 - run 'mvn spring-boot:run'
+- (run 'mvn test' to only run the tests)
 
 Steps to run FrontEnd:
 - cd into frontend folder (located Challenge/src/frontend)
