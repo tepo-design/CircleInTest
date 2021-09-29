@@ -19,7 +19,7 @@ public class WordCountController
      */
     @CrossOrigin("*")
     @GetMapping("/")
-    public int getWordCount(@RequestParam String url, @RequestParam String word) throws IOException
+    public int getWordCount(@RequestParam String url, @RequestParam String word)
     {
         WordCount counter = new WordCount();
 
