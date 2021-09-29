@@ -1,2 +1,15 @@
 
 .DS_Store
+*.xml
+.idea/CircleInTest.iml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/misc.xml
+.idea/modules.xml
+Challenge/pom.xml
+.idea/CircleInTest.iml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/misc.xml
+.idea/modules.xml
+Challenge/pom.xml
+*.xml
+.idea/CircleInTest.iml
