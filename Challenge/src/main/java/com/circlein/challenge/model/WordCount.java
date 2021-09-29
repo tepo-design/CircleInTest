@@ -15,19 +15,22 @@ public class WordCount
         Initially the following two methods were combined into one.
         I made the decision to split them so I could test getWordFreq().
         In the future I would learn to mock the static methods in getText() so that they are testable.
+        Manually tested through postman.
         Ideally, I wouldn't pass the 'word' parameter in both getText() and getWordFreq() .. this may change dependent
-        on frontend decisions. 
+        on frontend decisions.
 
         Parameters:
             - url: this is the URL for the webpage that we want to analyse
             - word: this is the word that we are measuring the frequency of in the given url
      */
-    public void getText(String url, String word) throws IOException
+    public int getText(String url, String word) throws IOException
     {
         Document toHtml = Jsoup.connect(url).get();
         String htmlToText = toHtml.body().text();
 
-        getWordFreq(htmlToText, word);
+        int count = getWordFreq(htmlToText, word);
+
+        return count;
     }
 
     /*
