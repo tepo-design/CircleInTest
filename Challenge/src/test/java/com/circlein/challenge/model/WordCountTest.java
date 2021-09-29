@@ -16,6 +16,9 @@ public class WordCountTest
 
         // Testing the expected frequency with inconsistent punctuation and case
         Assert.assertEquals(3, new WordCount().getWordFreq(INCORRECT_PUNC, "there"));
+
+        // Testing the expected frequency when a word is included in a larger word or series of characters
+        Assert.assertEquals(0, new WordCount().getWordFreq(ILLEGIBLE, "there"));
     }
 
     private static final String NORMAL = "We are going to go over there. There are people over there.";
