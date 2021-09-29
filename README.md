@@ -8,7 +8,7 @@ GitHub repo: https://github.com/tepo-design/CircleInTest
 
 Technologies used and required:
 - Java 8
-- Vue JS
+- Vue JS & npm
 - Maven
 
 BackEnd runs on Port 8081.
@@ -40,6 +40,7 @@ I was really happy I got the API calls to work and to produce the desired result
 <br>
 However, I think I have a lot to learn in terms of best practice for Springboot. Something I pondered over was whether it was bad practice to not include an Entity in the Springboot App or whether it was unnecessary for such lightweight functionality.
 Not implementing an Entity, however, probably limited how much testing I could do on the Controller without having a Service.
+One argument I had against an Entity was that webpage content is dynamic and can change over time. Due to this, it seemed like unnecessary code to implement iteration over a database to update entries in this application.
 In the future, I would look into that more and investigate the best practices for this.
 <br>
 I was happy I was able to get the Vue functionality working without ever having done it before, and I would be really excited to study and learn more of the FrontEnd to keep that learning going.
