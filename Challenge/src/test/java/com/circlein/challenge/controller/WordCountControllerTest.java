@@ -2,10 +2,9 @@ package com.circlein.challenge.controller;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@ExtendWith(SpringExtension.class)
+@SpringBootTest
 public class WordCountControllerTest
 {
 

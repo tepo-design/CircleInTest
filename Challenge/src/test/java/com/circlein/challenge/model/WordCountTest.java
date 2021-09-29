@@ -2,9 +2,11 @@ package com.circlein.challenge.model;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 
+@SpringBootTest
 public class WordCountTest
 {
     @Test
