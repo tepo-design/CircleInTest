@@ -14,7 +14,7 @@ public class WordCountController
 {
 
     /*
-        Get Mapping to calculate the word frequency on a given webpage
+        Get Mapping to calculate the word frequency of a given webpage
         Manually tested via postman
      */
     @GetMapping("/")
